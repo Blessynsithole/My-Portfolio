@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me | Blessing's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo">BS</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-key"></i> About</a></li>
+        <li><a href="expertise.html" class="nav-link"><i class="fas fa-laptop-code"></i> Expertise</a></li>
+        <li><a href="projects.html" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="skills.html" class="nav-link"><i class="fas fa-cogs"></i> Skills</a></li>
+        <li><a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <main class="contact-page">
+    <section class="contact-hero">
+      <h1>Get In <span>Touch</span></h1>
+      <p>Let's collaborate on something amazing</p>
+    </section>
+
+    <section class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span>blessynsithole@gmail.com</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <span>+263 782734219</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Midlands State University, Zimbabwe</span>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xzzraaaa" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

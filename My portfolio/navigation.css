@@ -1,0 +1,255 @@
+:root {
+  --primary: #6C63FF;
+  --primary-light: #8B85FF;
+  --secondary: #4D4C72;
+  --dark: #2A2A3B;
+  --light: #F8F9FA;
+  --accent: #FF6584;
+  --accent-light: #FF8FA3;
+  --text: #33334D;
+  --text-light: #6D6D8A;
+  --white: #FFFFFF;
+  --black: #000000;
+  --glass: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--light);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+}
+
+.glass-nav.scrolled .nav-links a {
+  color: var(--white);
+}
+
+.glass-nav.scrolled .menu-toggle {
+  color: var(--white);
+}
+
+.project-card,
+.skill-bar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+/* NAVIGATION STYLES */
+.glass-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  color: var(--primary-light);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-toggle i {
+  font-size: 1.8rem;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background: var(--dark);
+    backdrop-filter: blur(12px);
+    padding: 6rem 2rem 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    z-index: 998;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    padding: 1.5rem 0;
+    font-size: 1.2rem;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--white);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--accent-light);
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+  }
+
+  .menu-toggle .fa-bars {
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-toggle .fa-times {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-toggle.active .fa-bars {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .fa-times {
+    opacity: 1;
+  }
+
+  .glass-nav.scrolled .nav-links a {
+    color: var(--white);
+  }
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: -50px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 99;
+  opacity: 0;
+}
+
+.back-to-top.active {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  background: var(--primary-light);
+  transform: translateY(-3px);
+}

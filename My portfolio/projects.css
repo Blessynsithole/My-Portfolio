@@ -1,0 +1,154 @@
+/* css/projects.css */
+@import url('base.css');
+
+.projects-page {
+  padding: 8rem 2rem 4rem; /* Top, sides, bottom */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 1rem; /* Inner padding for text */
+}
+
+.projects-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3rem); /* Responsive font size */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: var(--dark);
+}
+
+.projects-hero h1 span {
+  color: var(--primary);
+}
+
+.projects-hero p {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem; /* Inner padding for grid */
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  border: 1px solid var(--glass-border);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-img img {
+  transform: scale(1.05);
+}
+
+.project-links {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-links {
+  opacity: 1;
+}
+
+.project-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.project-links a:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-tech span {
+  background: rgba(108, 99, 255, 0.1);
+  color: var(--primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 6rem 1.5rem 3rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page {
+    padding: 5rem 1rem 2rem;
+  }
+  
+  .projects-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .project-card {
+    max-width: 100%;
+  }
+}

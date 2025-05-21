@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Expertise | Blessing's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="expertise.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo">BS</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-key"></i> About</a></li>
+        <li><a href="expertise.html" class="nav-link active"><i class="fas fa-laptop-code"></i> Expertise</a></li>
+        <li><a href="projects.html" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="skills.html" class="nav-link"><i class="fas fa-cogs"></i> Skills</a></li>
+        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Expertise Section -->
+  <main class="expertise-page">
+    <section class="expertise-hero">
+      <h1>My <span>Expertise</span></h1>
+      <p>Where engineering meets digital innovation</p>
+    </section>
+
+    <section class="expertise-container">
+      <div class="expertise-cards">
+        <!-- Engineering Expertise -->
+        <div class="expertise-card" data-category="engineering">
+          <div class="card-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Design and development of futuristics web apps using both traditional and digital methods.</p>
+          <ul class="expertise-list">
+            <li>Frontend development</li>
+            <li>Graphic Designs</li>
+            <li>Web designs</li>
+          </ul>
+        </div>
+
+        <!-- Digital Expertise -->
+        <div class="expertise-card" data-category="digital">
+          <div class="card-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI Integration</h3>
+          <p>Building intelligent features using machine learning models, chatbots, and data-driven decision systems for smarter user interactions.</p>
+          <ul class="expertise-list">
+            <li>Natural Language Processing (NLP)</li>
+            <li>Chatbot Development</li>
+            <li>Predictive Analytics</li>
+            <li>Machine Learning Basics</li>
+          </ul>
+        </div>
+
+        <!-- Hybrid Expertise -->
+        <div class="expertise-card" data-category="hybrid">
+          <div class="card-icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <h3>Cybersecurity & Authentication Systems</h3>
+          <p>Keeping user data safe and systems locked tight/p>
+          <ul class="expertise-list">
+            <li>Secure Login/Registration</li>
+            <li>Data Encryption</li>
+            <li>Vulnerability Testing</li>
+            <li>JWT & OAuth2 Authentication</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Expertise Progress -->
+      <div class="expertise-progress">
+        <h2>Areas of Specialization</h2>
+        <div class="progress-container">
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>Frontend development</span>
+              <span>80%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>Graphic designing</span>
+              <span>85%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>Artificial Intelligence</span>
+              <span>30%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>Project Management</span>
+              <span>88%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="expertise.js"></script>
+</body>
+</html>

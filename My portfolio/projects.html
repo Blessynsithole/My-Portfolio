@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects | Blessing's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo">BS</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html" class="nav-link"><i class="fas fa-key"></i> About</a></li>
+        <li><a href="expertise.html" class="nav-link"><i class="fas fa-laptop-code"></i> Expertise</a></li>
+        <li><a href="projects.html" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="skills.html" class="nav-link"><i class="fas fa-cogs"></i> Skills</a></li>
+        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <main class="projects-page">
+    <section class="projects-hero">
+      <h1>My <span>Projects</span></h1>
+      <p>Where engineering meets digital innovation</p>
+    </section>
+
+    <section class="projects-grid">
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="Lockscreen Wallpapers.jpeg" alt="Smart Timetable App">
+          <div class="project-links">
+            <a href="https://incredible-sunflower-9fc811.netlify.app"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Smart School Timetable App</h3>
+          <p>Dynamic PWA with dark mode and multi-profile support built with React and Netlify.</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Netlify</span>
+            <span>PWA</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="profile.JPEG" alt="Task Manager">
+          <div class="project-links">
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Advanced Task Manager</h3>
+          <p>Productivity tool featuring natural language processing and AI-powered scheduling.</p>
+          <div class="project-tech">
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span color = "read">Inprogress</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
